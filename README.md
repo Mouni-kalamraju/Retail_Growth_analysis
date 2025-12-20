@@ -6,13 +6,17 @@ The objective of this project was to identify the key drivers of **Purchase Amou
 
 ---
 
-## 2. Methodology & Feature Engineering
+## 2. Methodology & Technical Skills
+* **Feature Engineering:** Hybrid Encoding.To ensure mathematical accuracy, instead of simple Label Encoding, specific strategies based on feature types are followed:
+  * **Binary Mapping:** Converted Yes/No (Promo Codes, Discounts) and Gender to 0/1 to maintain interpretability.
+  * **Ordinal Mapping:** Converted **Size** (S, M, L, XL) and **Frequency** to numerical scales to preserve their logical rank.
+  * **One-Hot Encoding:** Used for nominal features like **Category** and **Payment Method** to prevent the models from assuming a "false hierarchy" between unrelated items.
+* **Statistical Testing:** ANOVA, Independent T-Testing, Chi-Square Test of Independence.
+* **Predictive Modeling:** Linear Regression & Random Forest (used for diagnostic importance).
+* **Data Visualization:** Seaborn, Matplotlib.
 
-To ensure mathematical accuracy, instead of simple Label Encoding, specific strategies based on feature types are followed:
 
-* **Binary Mapping:** Converted Yes/No (Promo Codes, Discounts) and Gender to 0/1 to maintain interpretability.
-* **Ordinal Mapping:** Converted **Size** (S, M, L, XL) and **Frequency** to numerical scales to preserve their logical rank.
-* **One-Hot Encoding:** Used for nominal features like **Category** and **Payment Method** to prevent the models from assuming a "false hierarchy" between unrelated items.
+
 
 ---
 
