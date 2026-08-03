@@ -5,20 +5,20 @@
 
 An executive-level diagnostic analytics framework evaluating customer purchasing behaviors, promotional margin cannibalization, and inventory volume demand.
 
----
 
-## 🌟 Interactive Dashboard Preview
 
-[![Dashboard Overview](docs/assets/dashboard_overview.png)]https://public.tableau.com/app/profile/mounika.kalamraju/viz/RetailSpendDiagnosticMarginOptimizationDashboard/Dashboard1
-> **💡 Interactive Feature:** Click the image above to interact with the live dashboard and parameter simulator on Tableau Public.
+## Interactive Dashboard Preview
 
----
+[![Dashboard Overview](docs/assets/Dashboard.png)](https://public.tableau.com/app/profile/mounika.kalamraju/viz/RetailSpendDiagnosticMarginOptimizationDashboard/Dashboard1)
+> ** Interactive Feature:** Click the image above to interact with the live dashboard and parameter simulator on Tableau Public.
+
+
 
 ## 1. Summary
 
 The objective of this project was to identify the key drivers of **Purchase Amount (USD)** and evaluate the effectiveness of current store strategies (Subscription, Discounts, and Seasonality). Through rigorous statistical testing, it is observed that the dataset follows a **Uniform Distribution**, meaning traditional customer segments (Age, Gender, Frequency) do not significantly impact the total spend per transaction.
 
----
+
 
 ## 2. Methodology & Technical Skills
 * **Feature Engineering:** Hybrid Encoding.To ensure mathematical accuracy, instead of simple Label Encoding, specific strategies based on feature types are followed:
@@ -30,11 +30,26 @@ The objective of this project was to identify the key drivers of **Purchase Amou
 * **Data Visualization:** Seaborn, Matplotlib.
 
 
+### 3. Hypothesis Testing & Statistical Proof
+To determine if customer attributes or promotional strategies influence transaction spend, formal statistical hypothesis tests were conducted ($\alpha = 0.05$):
 
+* **Test 1: Promo Efficacy (Independent Two-Sample T-Test)**
+  * **$H_0$:** Average spend is equal between Promo Code users and Non-users ($\mu_1 = \mu_2$).
+  * **$H_1$:** Average spend differs between groups ($\mu_1 \neq \mu_2$).
+  * **Result:** $t = -1.11$, $p = 0.266$ $\rightarrow$ **Fail to reject $H_0$**. Flat promo codes do not increase order value and risk cannibalizing margins.
 
----
+* **Test 2: Purchase Frequency vs. Spend (One-Way ANOVA)**
+  * **$H_0$:** Mean purchase amount is identical across all frequency tiers (Weekly, Monthly, Annual).
+  * **$H_1$:** At least one frequency tier has a significantly different mean purchase amount.
+  * **Result:** $F$-statistic $p = 0.889$ $\rightarrow$ **Fail to reject $H_0$**. High-frequency buyers spend no more per visit than annual buyers.
 
-## 3. Key Statistical Findings
+* **Test 3: Gender vs. Product Category (Chi-Square Test of Independence)**
+  * **$H_0$:** Category preference is independent of Gender.
+  * **$H_1$:** Category preference depends on Gender.
+  * **Result:** $\chi^2 = 0.598$, $p = 0.897$ $\rightarrow$ **Fail to reject $H_0$**. Category choice shows no statistically significant dependence on gender.
+ 
+    
+## 4. Key Statistical Findings
 
 **Table: Statistical Proof of Random Spending Distribution**
 
@@ -54,16 +69,16 @@ The objective of this project was to identify the key drivers of **Purchase Amou
 An **ANOVA p-value of 0.8**, and a **T-test p-value of 0.2** with a **T-statistic of -1.1** all tell the exact same story:
 **The spending behavior in this dataset is completely random and independent of customer traits.**
 
-## 4. Operational Insights (Non-Uniform Patterns)
+## 5. Operational Insights (Non-Uniform Patterns)
 
 While spending *amounts* are random, **Product Preferences** are not. 
 
 * **Gender-Category Link:** Certain categories (e.g., Accessories vs. Clothing) show non-uniform distributions by gender.
 * **Size Distribution:** Size "Medium" and "Large" dominate across categories, regardless of gender or location.
 
----
 
-## 5. Strategic Recommendations for Store Improvement
+
+## 6. Strategic Recommendations for Store Improvement
 Since the above analysis has systematically proven that neither Gender, Size, Frequency, nor Promo Codes drive higher spending, the following "Structural Changes" are recommended:
 
 | Current Finding | Proposed "Structural" Change |
@@ -72,12 +87,12 @@ Since the above analysis has systematically proven that neither Gender, Size, Fr
 | **Frequency p=0.8** | **Frequency Conversion:** Since "Weekly" shoppers spend the same as "Annual" shoppers, introduce a points system where points only accumulate on purchases *above* the $60 average. |
 | **Size Distribution** | **Inventory Precision:** Optimize stock ratios based on the Observed Size Distribution (e.g., 40% Medium, 30% Large). This reduces capital tied up in slow-moving sizes (S/XL).
 
----
 
-## 6. Final Conclusion
+
+## 7. Final Conclusion
 
 The store currently operates on a **High-Volume, Low-Segmentation** model. While the brand has "Universal Appeal," there is a significant opportunity to increase **Customer Lifetime Value (CLV)** by introducing structural incentives that reward higher basket sizes and increased visit frequency.
 
----
+
 
 
