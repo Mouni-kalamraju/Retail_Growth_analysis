@@ -1,5 +1,19 @@
 # Uncovering growth levers in Stochastic retail environments - A statistical deep dive
 
+[![Tableau Public](https://img.shields.io/badge/Tableau_Public-Live_Dashboard-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/mounika.kalamraju/viz/RetailSpendDiagnosticMarginOptimizationDashboard/Dashboard1)
+[![Python 3.10](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+
+An executive-level diagnostic analytics framework evaluating customer purchasing behaviors, promotional margin cannibalization, and inventory volume demand.
+
+---
+
+## 🌟 Interactive Dashboard Preview
+
+[![Dashboard Overview](docs/assets/dashboard_overview.png)]https://public.tableau.com/app/profile/mounika.kalamraju/viz/RetailSpendDiagnosticMarginOptimizationDashboard/Dashboard1
+> **💡 Interactive Feature:** Click the image above to interact with the live dashboard and parameter simulator on Tableau Public.
+
+---
+
 ## 1. Summary
 
 The objective of this project was to identify the key drivers of **Purchase Amount (USD)** and evaluate the effectiveness of current store strategies (Subscription, Discounts, and Seasonality). Through rigorous statistical testing, it is observed that the dataset follows a **Uniform Distribution**, meaning traditional customer segments (Age, Gender, Frequency) do not significantly impact the total spend per transaction.
